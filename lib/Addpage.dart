@@ -17,25 +17,25 @@ class _AddpageState extends State<Addpage> {
     return Column(children: <Widget>[
       (TextFormField(
         keyboardType: TextInputType.text,
-        initialValue: "Item Name",
+        initialValue: "Yardım Başlığı",
         textAlign: TextAlign.center,
         autofocus: true,
       )),
       TextFormField(
         keyboardType: TextInputType.text,
-        initialValue: "Location",
+        initialValue: "Yer",
         textAlign: TextAlign.center,
         autofocus: true,
       ),
       TextFormField(
         keyboardType: TextInputType.text,
-        initialValue: "Information",
+        initialValue: "Açıklama",
         textAlign: TextAlign.center,
         autofocus: true,
       ),
       TextFormField(
         keyboardType: TextInputType.text,
-        initialValue: "Photo Url",
+        initialValue: "Fotoğraf Yolu",
         textAlign: TextAlign.center,
         autofocus: true,
       ),
@@ -51,7 +51,7 @@ class _AddpageState extends State<Addpage> {
         },
         isSelected: isSelected,
       ),
-      ElevatedButton(onPressed: null, child: Text("Save"))
+      ElevatedButton(onPressed: null, child: Text("Kaydet"))
     ]);
   }
 }

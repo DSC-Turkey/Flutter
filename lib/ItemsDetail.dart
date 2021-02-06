@@ -62,7 +62,7 @@ class UrunDetay extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-              child: Text("This Area will include information about item",
+              child: Text("Bu alanda yardım ile ilgili açıklama yer alıcak",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16.0,
@@ -82,7 +82,7 @@ class UrunDetay extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  type ? "Take Hand" : "Give Hand",
+                  type ? "Yardımı al" : "Yardım yap",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,

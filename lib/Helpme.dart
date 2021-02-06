@@ -13,22 +13,22 @@ class _HelpmeState extends State<Helpme> {
   void initState() {
     super.initState();
     listofhm = [
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
-      cards(context, "Paint", "Van",
+      cards(context, "Boya", "Van",
           "https://cdn.pixabay.com/photo/2013/07/07/01/21/blue-143734__340.jpg",
           type: true),
     ];

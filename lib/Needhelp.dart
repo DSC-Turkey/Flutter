@@ -13,15 +13,15 @@ class _NeedHelpState extends State<NeedHelp> {
   void initState() {
     super.initState();
     listofnh = [
-      cards(context, "Pens", "Gaziantep",
+      cards(context, "Kalem", "Gaziantep",
           "https://cdn.pixabay.com/photo/2016/10/15/22/55/pen-1743869_960_720.jpg"),
-      cards(context, "Pens", "Gaziantep",
+      cards(context, "Kalem", "Gaziantep",
           "https://cdn.pixabay.com/photo/2016/10/15/22/55/pen-1743869_960_720.jpg"),
-      cards(context, "Pens", "Gaziantep",
+      cards(context, "Kalem", "Gaziantep",
           "https://cdn.pixabay.com/photo/2016/10/15/22/55/pen-1743869_960_720.jpg"),
-      cards(context, "Pens", "Gaziantep",
+      cards(context, "Kalem", "Gaziantep",
           "https://cdn.pixabay.com/photo/2016/10/15/22/55/pen-1743869_960_720.jpg"),
-      cards(context, "Pens", "Gaziantep",
+      cards(context, "Kalem", "Gaziantep",
           "https://cdn.pixabay.com/photo/2016/10/15/22/55/pen-1743869_960_720.jpg"),
     ];
   }

@@ -86,19 +86,19 @@ class _MainMenuState extends State<MainMenu> {
               decoration: BoxDecoration(color: Colors.red[400]),
             ),
             ListTile(
-              title: Text("My hands"),
+              title: Text("Yardımlarım"),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Points"),
+              title: Text("Puanlar"),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Settigs"),
+              title: Text("ayarlar"),
               onTap: () {},
             ),
             ListTile(
-              title: Text("Quit"),
+              title: Text("Çıkış Yap"),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -114,18 +114,18 @@ class _MainMenuState extends State<MainMenu> {
           BottomNavigationBarItem(
               // ignore: deprecated_member_use
               icon: Icon(Icons.hail),
-              title: Text("Need Help")),
+              title: Text("Yardım Talepleri")),
           BottomNavigationBarItem(
               // ignore: deprecated_member_use
               icon: Icon(
                 Icons.add_box,
                 size: 50,
               ),
-              title: Text("Add")),
+              title: Text("Ekle")),
           BottomNavigationBarItem(
               // ignore: deprecated_member_use
               icon: Icon(Icons.group),
-              title: Text("Give Hand"))
+              title: Text("Bağışlar"))
         ],
         onTap: (int tiklananButonPozisyonNo) {
           setState(() {
