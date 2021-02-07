@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "719591054248",
+    "firebase_url": "https://givehand-6e338-default-rtdb.firebaseio.com",
+    "project_id": "givehand-6e338",
+    "storage_bucket": "givehand-6e338.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719591054248:android:2bca565ba0c20f7fb8db9d",
+        "android_client_info": {
+          "package_name": "com.example.give_hand_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719591054248-39fr3eu16ibip8d25et2mk4a4g064640.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJDzBh5dj6zqLpPFq5lrEYdrSVyiMffyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719591054248-39fr3eu16ibip8d25et2mk4a4g064640.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

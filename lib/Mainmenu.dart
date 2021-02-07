@@ -3,21 +3,6 @@ import 'package:give_hand_main/Addpage.dart';
 import 'package:give_hand_main/Helpme.dart';
 import 'package:give_hand_main/Needhelp.dart';
 
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//         debugShowCheckedModeBanner: false,
-//         title: 'Givehand',
-//         theme: ThemeData(
-//           primarySwatch: Colors.purple,
-//         ),
-//         home: MainMenu());
-//   }
-// }
-
 class MainMenu extends StatefulWidget {
   @override
   _MainMenuState createState() => _MainMenuState();

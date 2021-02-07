@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:give_hand_main/Mainmenu.dart';
 import 'package:give_hand_main/signup.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(new MyApp());
 
@@ -24,6 +26,25 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final db = Firestore.instance;
+  TextEditingController emailInputController;
+  TextEditingController pwdInputController;
+
+  void takeusers() async {
+    var snapshot = await db.collection("Kullanıcılar").getDocuments();
+    snapshot.documents.forEach((doc) {
+      print(doc.data);
+    });
+  }
+
+  @override
+  void initState() {
+    emailInputController = new TextEditingController();
+    pwdInputController = new TextEditingController();
+    super.initState();
+    takeusers();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -48,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   children: <Widget>[
                     TextField(
+                      controller: emailInputController,
                       decoration: InputDecoration(
                           labelText: 'EMAIL',
                           labelStyle: TextStyle(
@@ -59,6 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     SizedBox(height: 20.0),
                     TextField(
+                      controller: pwdInputController,
                       decoration: InputDecoration(
                           labelText: 'ŞİFRE',
                           labelStyle: TextStyle(
@@ -94,10 +117,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MainMenu()));
+                            FirebaseAuth.instance
+                                .signInWithEmailAndPassword(
+                                    email: emailInputController.text,
+                                    password: pwdInputController.text)
+                                .then((result) => {
+                                      Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => MainMenu()),
+                                          (_) => false),
+                                    });
                           },
                           child: Center(
                             child: Text(

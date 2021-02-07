@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:give_hand_main/main.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -6,6 +8,17 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+  TextEditingController emailInputController;
+  TextEditingController pwdInputController;
+
+  @override
+  void initState() {
+    emailInputController = new TextEditingController();
+    pwdInputController = new TextEditingController();
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -32,6 +45,7 @@ class _SignupPageState extends State<SignupPage> {
                   child: Column(
                     children: <Widget>[
                       TextField(
+                        controller: emailInputController,
                         decoration: InputDecoration(
                             labelText: 'EMAIL',
                             labelStyle: TextStyle(
@@ -43,6 +57,7 @@ class _SignupPageState extends State<SignupPage> {
                       ),
                       SizedBox(height: 10.0),
                       TextField(
+                        controller: pwdInputController,
                         decoration: InputDecoration(
                             labelText: 'ŞİFRE ',
                             labelStyle: TextStyle(
@@ -54,16 +69,6 @@ class _SignupPageState extends State<SignupPage> {
                         obscureText: true,
                       ),
                       SizedBox(height: 10.0),
-                      TextField(
-                        decoration: InputDecoration(
-                            labelText: 'Kullanıcı Adı',
-                            labelStyle: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.red))),
-                      ),
                       SizedBox(height: 50.0),
                       Container(
                           height: 40.0,
@@ -73,7 +78,20 @@ class _SignupPageState extends State<SignupPage> {
                             color: Colors.red,
                             elevation: 7.0,
                             child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                FirebaseAuth.instance
+                                    .createUserWithEmailAndPassword(
+                                        email: emailInputController.text,
+                                        password: pwdInputController.text)
+                                    .then((result) => {
+                                          Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      MyHomePage()),
+                                              (_) => false),
+                                        });
+                              },
                               child: Center(
                                 child: Text(
                                   'KAYIT OL',
