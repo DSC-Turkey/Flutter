@@ -30,19 +30,11 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController emailInputController;
   TextEditingController pwdInputController;
 
-  void takeusers() async {
-    var snapshot = await db.collection("Kullanıcılar").getDocuments();
-    snapshot.documents.forEach((doc) {
-      print(doc.data);
-    });
-  }
-
   @override
   void initState() {
     emailInputController = new TextEditingController();
     pwdInputController = new TextEditingController();
     super.initState();
-    takeusers();
   }
 
   @override
